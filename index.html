@@ -12,12 +12,12 @@
 <script src="messageTypes.js"></script>
 <script>
     $(function() {
-        var receiver = new cast.receiver.Receiver('*** YOUR APP ID ****', ['*** YOUR NAMESPACE ***']),
-            channelHandler = new cast.receiver.ChannelHandler('*** YOUR NAMESPACE ***'),
+        var receiver = new cast.receiver.Receiver('D313DB36', ['TestingRaman']),
+            channelHandler = new cast.receiver.ChannelHandler('TestingRaman'),
             $messages = $('.messages');
 
         channelHandler.addChannelFactory(
-            receiver.createChannelFactory('*** YOUR NAMESPACE ***'));
+            receiver.createChannelFactory('TestingRaman'));
 
         receiver.start();
 
