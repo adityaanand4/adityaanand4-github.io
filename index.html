@@ -12,12 +12,12 @@
 <script src="messageTypes.js"></script>
 <script>
     $(function() {
-        var receiver = new cast.receiver.Receiver('D313DB36', ['TestingRaman']),
-            channelHandler = new cast.receiver.ChannelHandler('TestingRaman'),
+        var receiver = new cast.receiver.Receiver('D313DB36', ['urn:x-cast:com.example.Chromecast']),
+            channelHandler = new cast.receiver.ChannelHandler('urn:x-cast:com.example.Chromecast'),
             $messages = $('.messages');
 
         channelHandler.addChannelFactory(
-            receiver.createChannelFactory('TestingRaman'));
+            receiver.createChannelFactory('urn:x-cast:com.example.Chromecast'));
 
         receiver.start();
 
